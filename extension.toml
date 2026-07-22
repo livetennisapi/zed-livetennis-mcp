@@ -3,7 +3,7 @@ name = "Live Tennis MCP Server"
 version = "0.1.0"
 schema_version = 1
 authors = ["Live Tennis API <support@livetennisapi.com>"]
-description = "Real-time tennis scores, players, odds and model win-probability in the Zed agent panel, via the Live Tennis API MCP server."
+description = "Real-time tennis scores, players and fixtures in the Zed agent panel, via the Live Tennis API MCP server. Odds and model win-probability require a paid plan."
 repository = "https://github.com/livetennisapi/zed-livetennis-mcp"
 
 [context_servers.livetennis-mcp]
