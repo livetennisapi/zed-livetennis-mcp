@@ -1,7 +1,7 @@
 # Live Tennis MCP Server — Setup
 
-Gives Zed's agent real-time tennis data: live scores, upcoming and recent matches, players,
-odds and model win-probability.
+Gives Zed's agent real-time tennis data: live scores, players and fixtures on the free plan.
+Match timelines, market prices and model analysis require a paid plan.
 
 ## 1. Get an API key
 
@@ -38,22 +38,23 @@ need to install it yourself.
 
 ## Available tools
 
-| Tool | Description |
-|------|-------------|
-| `get_live_matches` | Matches currently in play |
-| `get_upcoming_matches` | Matches scheduled to start soon |
-| `get_match` | Full detail for one match |
-| `get_match_score` | Current score for one match |
-| `search_players` | Find players by name |
-| `get_player` | Profile and ranking for one player |
-| `get_fixtures` | Scheduled fixtures |
-| `get_recent_results` | Recently completed matches |
-| `get_match_events` | Point-by-point / event feed for a match |
-| `get_match_odds` | Bookmaker odds for a match |
-| `get_match_analysis` | Model win-probability and analysis |
-| `check_api_status` | Verify your key and see quota |
+| Tool | Description | Plan |
+|------|-------------|------|
+| `get_live_matches` | Matches currently in play | Free |
+| `get_upcoming_matches` | Matches scheduled to start soon | Free |
+| `get_match` | Full detail for one match | Free |
+| `get_match_score` | Current score for one match | Free |
+| `search_players` | Find players by name | Free |
+| `get_player` | Profile and ranking for one player | Free |
+| `get_fixtures` | Scheduled fixtures | Free |
+| `check_api_status` | Check reachability and which plan your key is on | Free |
+| `get_recent_results` | Recently completed matches | Basic |
+| `get_match_events` | Match timeline: breaks, games won, momentum runs | Pro |
+| `get_match_odds` | Match-winner market prices (bid/ask/mid) | Pro |
+| `get_match_analysis` | Model analysis and win probability | Ultra |
 
-All tools are **read-only**.
+All tools are **read-only**. Tools above your plan are not errors — they return a plain-English
+note explaining which plan is needed. Run `check_api_status` to see your current plan.
 
 ## Troubleshooting
 
