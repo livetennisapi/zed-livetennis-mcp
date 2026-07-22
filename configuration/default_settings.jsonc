@@ -1,0 +1,9 @@
+{
+  // Your Live Tennis API key.
+  //
+  // Get a free one at:
+  //   https://livetennisapi.com/subscribe/free
+  //
+  // Keys look like "twjp_…". This is the only required setting.
+  "api_key": ""
+}
