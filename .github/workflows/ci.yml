@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - name: Truthcheck
+        run: sh scripts/truthcheck.sh
       # Zed compiles extensions to WebAssembly; build the same artifact here.
       - run: rustup target add wasm32-wasip2
       - run: cargo build --release --target wasm32-wasip2
